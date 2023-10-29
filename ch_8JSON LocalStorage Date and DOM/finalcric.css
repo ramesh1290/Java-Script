@@ -1,0 +1,43 @@
+body {
+  text-align: center;
+}
+.same{
+  display: flex;
+ justify-content: space-evenly;
+}
+.bat{
+  background-image: url("bat.jpg");
+  background-size: cover;
+  width:100px;
+  height:100px;
+  border:none;
+  cursor: pointer;
+  border-radius: 50%;
+  border:2px solid rgb(12, 17, 32,0.2);
+  background-color:lightgreen;
+  /* border:2px solid black; */
+}
+.ball{
+  background-image: url("ball.jpg");
+  background-size: cover;
+  width:100px;
+  height:100px;
+  border:none;
+  border-radius: 50%;
+  background-color: rgb(27, 212, 27);
+  border:2px solid rgb(12, 17, 32,0.2);
+  cursor: pointer;
+  /* border:2px solid black; */
+}
+.stump{
+  background-image: url("stump.jpg");
+  background-size: cover;
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  border:none;
+  background-color: rgb(27, 212, 27);
+  border:2px solid rgb(12, 17, 32,0.2);
+  cursor: pointer;
+  /* border:2px solid black; */
+}

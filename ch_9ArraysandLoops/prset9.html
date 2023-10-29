@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1
+    // let arr = [5, 6]
+    // arr.unshift(4);
+    // console.log(arr);
+    // arr.push(7)
+    // console.log(arr);
+    //2
+    // function getElement(arr1, position) {
+    //   return arr1[position - 1]
+
+    // }
+    // let arr1 = [1, 2, 3, 4]
+    // console.log(`The return element is ${getElement(arr1, 1)}`)
+    //3
+    // let orginal = [1, 2, 3, 4]
+    // let copy = orginal.slice();
+    // console.log(copy);
+    //next method
+
+    // function copy1(arr2){
+    //      let arr3 = arr2.slice(0,arr2.length)
+    //      return arr3;
+    // }
+    // let arr2=[1,2,3,4]
+    // console.log(copy1(arr2));
+
+
+    //4 and 5
+    function isPrime(num) {
+      for (let i = 2; i < num; i++) {
+        if (num % i === 0) {
+          return false;
+        }
+
+      }
+      return true;
+    }
+    let num = 2;
+    let i = 0;
+    while (true)//or, i<5
+    {
+      if (isPrime(num)) {
+        console.log(`Prime numbers are ${num}`);
+        i++;
+        if (i >= 5) {
+          break;
+        }
+      }
+      num++;
+      // console.log(`The count is ${num}`)
+    }
+
+
+
+    //6
+    // for (let i = 10; i >= 1; i--) {
+    //   console.log(i);
+    // }
+
+    // for(let i=0;i<10;i++)
+    // {
+    //   console.log(10-i);
+    // }
+    //7
+    let positiveNum = [1, -6, 5, 7, -98];
+    for (i = 0; i < positiveNum.length; i++) {
+      if (positiveNum[i] < 0) {
+        continue;
+      }
+      console.log(`Positive numbers are ${positiveNum[i]}`);
+    }
+    //8
+    let arr5 = ['KG', 'Coding', 'Javascript', 'Course', 'Is', 'Best'];
+
+    // let result = '';
+    // for (i = 0; i < arr5.length; i++) {
+
+    //   result += arr5[i] + ' '
+
+    // }
+    // console.log(result)
+
+    //OR
+    // for (i = 0; i < arr5.length; i++) {
+    //   console.log(`The added string is ${arr5[0] + arr5[1] + arr5[2] + arr5[3] + arr5[4] + arr5[5]}`)
+    // }
+    //OR
+    console.log(arr5.join(' '));
+
+  </script>
+</body>
+
+</html>

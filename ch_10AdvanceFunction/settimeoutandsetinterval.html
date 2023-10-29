@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let varName = () => {
+    //   console.log('HELLO WORLD');
+    // }
+    // console.log('alarm set');
+    // let timerId=setTimeout(varName, 1000)
+    // console.log(timerId);
+    // clearTimeout(timerId)
+
+//TO RUN FOR FIVE TIMES AND STOP
+    let varName = () => {
+          console.log(`SUBHA HOGAI UTHJAO ${new Date()}`)
+    
+    }
+    console.log('DOOR OPENS');
+    let timerId=setInterval(varName,1000);
+  
+  //  clearInterval(timerId);  
+   setTimeout(()=>{return clearInterval(timerId)},5000);
+   
+  </script>
+</body>
+
+</html>

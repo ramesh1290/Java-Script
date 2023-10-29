@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  //De-structuring
+// let product={
+//   company:'mango',
+//   price:400,
+//   item:'bag'
+// };
+/*let company=product['company'];*Another method*/
+// let {company,price,item}=product;
+// console.log(company,price,item);
+
+//Property shorthand
+// let price=400;
+// let product={
+//   company:'mango',
+//   item:'bag',
+//   price:price
+// };
+// console.log(product.price)
+
+
+//Method Shorthand
+
+/*let product={
+  company:'mango',
+  item:'bag',
+  price:400,
+ displayVariable:function()
+  {
+        return `${product.price}`;
+  }
+};
+console.log(product.displayVariable());
+*/
+
+//OR we can use the below code
+
+let product={
+  company:'mango',
+  item:'bag',
+  price:400,
+ displayVariable()
+  {
+        return `${product.price}`;
+  }
+};
+console.log(product.displayVariable());
+</script>
+</body>
+</html>

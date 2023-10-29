@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // localStorage.setItem('name','ram');
+    // localStorage.setItem('age','14');
+    // alert(localStorage.getItem('name'));
+    // localStorage.clear();//To delete the data stored in the server.
+
+    let product = {
+      name: 'glass',
+      brand: 'lenskart',
+      price: 500,
+      rating: {
+        stars: 5,
+        noOfReviews: 500,
+      },
+    };
+    localStorage.setItem('name','ram')
+    console.log(localStorage.setItem('Product', JSON.stringify(product)));
+    console.log(localStorage.getItem('Product'))
+
+    let str = JSON.stringify(product);
+    // let str=localStorage.getItem('Product')
+    let obj = JSON.parse(str);
+    console.log(obj);
+    // localStorage.clear();
+   localStorage.clear()
+  </script>
+</body>
+
+</html>

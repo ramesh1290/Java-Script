@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>prset4</title>
+</head>
+<body>
+  <p id="name">hlo</p>
+  <b id="evaluate"></b>
+  <script>
+    //1
+    const name='ram'
+    //2
+    const myName='ram'
+    document.querySelector('#name').innerText = `My name is ${myName}.`
+    console.log(myName)
+    //3
+    let cost=1500-500+200
+    console.log(cost)
+//FOR STRING EVALUATION
+    let a=5;
+    let b=5;
+    let c=eval('a+b')
+    document.querySelector('#evaluate').innerText = c;
+
+  </script>
+</body>
+</html>

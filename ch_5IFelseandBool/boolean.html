@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boolean</title>
+</head>
+
+<body>
+  <h1 id="first"></h1>
+  <script>
+    document.querySelector('#first').innerText = typeof ('true')
+    // console.log(5==5)
+    // console.log(5===5)
+    // console.log(5=='5')
+    // console.log(5==='5')
+
+    // console.log(5 != 5)
+    // console.log(5 !== 5)
+    // console.log(5 != '5')
+    // console.log(5 !== '5')
+    // console.log(5 + 5 + 5 === 5 + 5 + 5)
+    const age = prompt("Enter your age:")
+    alert(`Your age is ${age}.`)
+    if (age>65 )
+    {
+      console.log("You can't drive.");
+    }
+    else if (age>18){
+      console.log("You can drive.");
+    }
+    else
+    {
+      console.log("You need to wait for driving.");
+    }
+
+    let a=prompt("Enter your name");
+    alert(`My name is ${a}`);
+
+  </script>
+</body>
+
+</html>

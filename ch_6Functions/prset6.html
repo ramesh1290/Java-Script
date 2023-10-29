@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1 To check the number is odd or even.
+
+    // function checkOdd(number) {
+    //   let rem = number % 2;
+    //   let checkOdd=rem == 1;
+    //   return checkOdd;
+    // }
+    // console.log(checkOdd(0));
+    // console.log(checkOdd(1));
+    // console.log(checkOdd(2));
+    // console.log(checkOdd(3));
+
+    //2.Find the largest among the two number
+    //   function largestNumber(num1, num2)
+    //  {
+    //     let large;
+    //     if (num1 > num2) {
+    //       large = num1;
+    //     }
+    //     else if(num1<num2){
+    //       large = num2;
+    //     }
+    //     else{
+    //       large='Both numbers are equal';
+    //     }
+    //     return large;
+    //   }
+    //   console.log(largestNumber(4,6));
+    //   console.log(largestNumber(5,10));
+    //   console.log(largestNumber(6,6));
+    //   console.log(largestNumber(8,6));
+
+
+
+    //Using Ternary Operator
+
+    // function largestNumber2(num1=2,num2=4)
+    // {
+
+    //      let result=(num1>num2)?'num1 is largest':'num2 is largest';
+    //      return result;
+    // }
+    // console.log(largestNumber2())
+
+    //3.To convert celsisus into fahrenheit
+
+    function convert(celsisus) {
+
+      let fahrenheit = ((9 / 5) * celsisus + 32);
+      return fahrenheit;
+    }
+    console.log(convert(37));
+
+  </script>
+</body>
+
+</html>

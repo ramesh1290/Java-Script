@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cricket Game</title>
+  </head>
+  <style>
+    body {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="alert('User has clicked on Bat.');
+    let computer_choice=computerChoice();//global variable
+    let resultMessage=getResult(bat,computer_choice);
+      showResult(bat,computer_choice,resultMessage);
+      "
+    >
+      Bat
+    </button>
+
+    <button
+      onclick="alert('User has clicked on Ball');
+    computer_choice=computerChoice();//global variable
+    resultMessage=getResult(ball,computer_choice);
+    showResult(ball,computer_choice,resultMessage);
+    "
+    >
+      Ball
+    </button>
+
+    <button
+      onclick="alert('User has clicked on Stump')
+    computer_choice=computerChoice();//global variable
+    resultMessage=getResult(stump,computer_choice);
+    showResult(stump,computer_choice,resultMessage);
+    "
+    >
+      Stump
+    </button>
+
+    <script>
+      alert("Choice:0 for Bat, 1 for Ball, 2 for Stump");
+      alert("Hope you would like the game.");
+
+      let bat = 0,
+        ball = 1,
+        stump = 2;
+
+      // let computer_choice; global variable
+      function computerChoice() {
+        //local variable
+        let computer_choice = Math.floor(Math.random() * 3);
+        return computer_choice;
+      }
+
+      function getResult(userMove, computerMove) {
+        if (userMove == bat) {
+          //Nested IF ELSE
+          if (computerMove == bat) {
+            return "draw";
+          } else if (computerMove == ball) {
+            return "User wins";
+          } else if (computerMove == stump) {
+            return "Computer wins";
+          }
+        } else if (userMove == ball) {
+          if (computerMove == ball) {
+            return "Draw";
+          } else if (computerMove == bat) {
+            return "Computer Wins";
+          } else if (computerMove == stump) {
+            return "User Wins";
+          }
+        } else {
+          if (computerMove == stump) {
+            return "Draw";
+          } else if (computerMove == bat) {
+            return "User Wins";
+          } else if (computerMove == ball) {
+            return "Computer Wins";
+          }
+        }
+      }
+
+      function showResult(userMove, computerMove, result) {
+        alert(
+          `User choice is ${userMove}.Computer choice is ${computerMove} Result is ${result}`
+        );
+      }
+    </script>
+  </body>
+</html>

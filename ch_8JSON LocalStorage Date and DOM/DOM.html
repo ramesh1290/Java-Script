@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <div class="myButton" style="border:2px solid black;">CLICK Me</div>
+ <script>
+  let newElement=document.createElement('button');
+  console.log(newElement);
+  newElement.innerText='CLICK'
+
+  let newElement2=document.createElement('button1');
+  console.log(newElement2);
+  newElement2.innerText='CLICK2'
+  // document.querySelector('.myButton').appendChild(newElement);
+  // document.querySelector('.myButton').removeChild(newElement);
+
+  document.querySelector('.myButton').appendChild(newElement);
+  document.querySelector('.myButton').removeChild(newElement);
+  // document.querySelector('.myButton').replaceChild(newElement2);
+
+
+
+ </script>
+</body>
+</html>

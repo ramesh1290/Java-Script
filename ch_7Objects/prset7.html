@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //1.Create object to represent the product from Myntra
+    let product = {
+      item: 'Glass',
+      manufaturingCompany: 'Lenskart'
+    };
+    let { item, manufaturingCompany } = product;
+    console.log(item, '\t', manufaturingCompany);
+    //2
+
+    let x = {
+      age: 20,
+    };
+    let y = x;
+    console.log(x.age)
+    console.log(y.age)
+    x.age = 40;
+    console.log(x.age)
+    console.log(y.age)
+    //3 Use Array Subscript operator
+
+    let productTime = {
+      'delivery-time': '20 minutes',
+    };
+    console.log(productTime['delivery-time']);
+
+    //4
+    let object1 = {
+      message: 'good job',
+      status: 'complete'
+    };
+    let { message, status } = object1;
+    console.log(message, '\t', status);
+
+    //5
+
+    let product1 = {
+      item: 'car',
+      brand: 'hyundai',
+      isIdenticalProduct: function () {
+        item = 0;
+        if (item == 0) {
+          return product1.item;
+        }
+        else {
+          return product1.brand;
+        }
+      }
+    };
+    console.log(product1.isIdenticalProduct());
+  </script>
+</body>
+
+</html>

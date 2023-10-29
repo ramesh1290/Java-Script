@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button {
+      cursor: pointer;
+    }
+    .odd{
+      color:white;
+      background-color:red;
+    }
+    .even{
+      color:white;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 class="heading"></h3>
+  <button class="first" onclick="clickButton();//document.querySelector('.first').innerText=`It has been pressed ${pressedCount} times`;
+  ;
+  // let requiredColor=check();
+  // console.log(requiredColor);
+
+
+    "></button><br><br>
+    <button onclick="
+     
+    ">reset</button>
+  <script>
+    function doGreeting(personName) {
+      let currentDate = new Date();
+      console.log(currentDate)
+      let hours = currentDate.getHours();
+      let text = document.querySelector('.heading')
+      if (hours >= 5 && hours < 12) {
+        text.innerText = `Good morning ${personName}`;
+      }
+      else if (hours > 12 && hours <= 18) {
+        text.innerText = `Good afternoon ${personName}`;
+      }
+      else {
+        text.innerText = `Good night ${personName}`
+      }
+    }
+    doGreeting('Ram');
+    // document.querySelector('.heading').innerText = `Good Morning it is ${currentDate.getHours()} O' clock`;
+    // console.log(`Good morning it is ${currentDate.getHours()}.`);
+    let pressedCount =localStorage.getItem('pressedCount') || 0;
+    function clickButton() {
+      pressedCount++;
+      localStorage.setItem('pressedCount',pressedCount);
+      updateButton();
+     }
+     function updateButton()
+     {
+      let button1 = document.querySelector('.first')
+      if(pressedCount %2 ===0)
+      {
+           console.log('even')
+           button1.classList.add('even');
+           button1.classList.remove('odd');
+
+      }
+      else{
+        console.log('odd')
+           button1.classList.add('odd');
+           button1.classList.remove('even');
+
+      }
+      button1.innerText = `You have been pressed ${pressedCount} times. `
+     }
+     updateButton();
+
+  </script>
+</body>
+
+</html>

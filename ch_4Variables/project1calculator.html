@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="project1calculator.css">
+</head>
+
+<body>
+  <div class="mainbox">CALCULATOR
+    <div class="text-box">
+      <input class="text-area"type="text" placeholder=" "readonly>
+    </div>
+    <div class="tab-section">
+      <div class="box-1 box"onclick="currentValue='';document.querySelector('.text-area').value =currentValue">C</div>
+
+      <div class="box-2 box"onclick="currentValue=currentValue+'1';document.querySelector('.text-area').value =currentValue">1</div>
+
+      <div class="box-3 box"onclick="currentValue=currentValue+'2';document.querySelector('.text-area').value =currentValue">2</div>
+
+      <div class="box-4 box"onclick="currentValue=currentValue+'+';document.querySelector('.text-area').value =currentValue">+</div>
+
+      <div class="box-5 box"onclick="currentValue=currentValue+'3';document.querySelector('.text-area').value =currentValue">3</div>
+
+      <div class="box-6 box"onclick="currentValue=currentValue+'4';document.querySelector('.text-area').value =currentValue">4</div>
+
+      <div class="box-7 box"onclick="currentValue=currentValue+'-';document.querySelector('.text-area').value =currentValue">-</div>
+
+      <div class="box-8 box"onclick="currentValue=currentValue+'5';document.querySelector('.text-area').value =currentValue">5</div>
+      
+      <div class="box-9 box"onclick="currentValue=currentValue+'6';document.querySelector('.text-area').value =currentValue">6</div>
+
+      <div class="box-10 box"onclick="currentValue=currentValue+'*';document.querySelector('.text-area').value =currentValue">*</div>
+
+      <div class="box-11 box"onclick="currentValue=currentValue+'7';document.querySelector('.text-area').value =currentValue">7</div>
+
+      <div class="box-12 box"onclick="currentValue=currentValue+'8';document.querySelector('.text-area').value =currentValue">8</div>
+      
+      <div class="box-13 box"onclick="currentValue=currentValue+'/';document.querySelector('.text-area').value =currentValue">/</div>
+
+      <div class="box-14 box"onclick="
+      let result=eval(currentValue); 
+      currentValue=result;document.querySelector('.text-area').value = currentValue">=</div>
+
+      <div class="box-15 box"onclick="currentValue=currentValue+'9';document.querySelector('.text-area').value =currentValue">9</div>
+
+      <div class="box-16 box"onclick="currentValue=currentValue+'0';document.querySelector('.text-area').value =currentValue">0</div>
+      
+      <div class="box-17 box"onclick="currentValue=currentValue+'.';document.querySelector('.text-area').value =currentValue">.</div>
+
+  </div>
+  <script src="project1calculator.js">
+
+  </script>
+</body>
+
+</html>

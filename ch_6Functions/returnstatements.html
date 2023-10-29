@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function randomMoveGenerator(){
+    //   let randomNumber = Math.floor(Math.random()*3);
+    //   let numberGenerated=randomNumber;
+    //   return numberGenerated;
+    // }
+    // console.log(`The number generated is ${randomMoveGenerator()}`)
+    // console.log(`The number generated is ${randomMoveGenerator()}`)
+    // console.log(`The number generated is ${randomMoveGenerator()}`)
+
+
+    function determineDriveStatus()
+    {
+      let age=34;
+      let status;
+      if(age===undefined)
+      {
+        return 'you are not defined.'
+      }
+      if (age > 18) 
+      {
+        status = 'You can drive car';
+      }
+      else
+       {
+        status = 'You can drive bicycle';
+      }
+      return status;
+    }
+    console.log(determineDriveStatus());
+  </script>
+</body>
+
+</html>

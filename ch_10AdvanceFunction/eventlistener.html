@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button class="myButton">CLICK ME</button>
+  <script>
+
+    let functionPassed = event => {
+      console.log('I am clicked')
+    }
+    let buttonElement = document.querySelector('.myButton');
+    buttonElement.addEventListener("mouseover", functionPassed);
+    let functionDate = event => {
+      console.log(new Date());
+    }
+    buttonElement.addEventListener('right-click', functionDate)
+    // buttonElement.removeEventListener('click',functionDate)
+let functionEnable=event=()=>{
+console.log(new Date())
+}
+
+buttonElement.addEventListener('mouseover',functionEnable);
+buttonElement.removeEventListener('mouseover',functionEnable);
+
+
+  </script>
+</body>
+
+
+</html>

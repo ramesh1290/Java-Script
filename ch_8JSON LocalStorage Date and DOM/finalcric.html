@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="finalcric.css">
+</head>
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <div class="same">
+  <button class="bat"onclick="
+  // button.innerText='USer has clicked on Bat';
+  
+  alert('User has clicked on Bat.');
+    let computer_choice=computerChoice();//global variable
+    let resultMessage=getResult(bat,computer_choice);
+      showResult(bat,computer_choice,resultMessage);
+      "></button>
+
+  <button class="ball" onclick="alert('User has clicked on Ball');
+    computer_choice=computerChoice();//global variable
+    resultMessage=getResult(ball,computer_choice);
+    showResult(ball,computer_choice,resultMessage);
+    ">
+    
+  </button>
+
+  <button class="stump" onclick="alert('User has clicked on Stump')
+    computer_choice=computerChoice();//global variable
+    resultMessage=getResult(stump,computer_choice);
+    showResult(stump,computer_choice,resultMessage);
+    ">
+  
+  </button>
+</div>
+<br><br>
+  <b class="firstMessage"></b><br>
+  <b class="secondMessage"></b><br>
+  <b class="userMove"></b><br>
+  <b class="computerMove"></b><br>
+  <b class="score"></b><br>
+  <b class="result"></b>
+  <script src="finalcric.js">
+
+  </script>
+</body>
+</html>

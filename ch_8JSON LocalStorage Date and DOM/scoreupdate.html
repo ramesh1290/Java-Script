@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cricket Game</title>
+</head>
+<style>
+  body {
+    text-align: center;
+  }
+  .same{
+    display: flex;
+   justify-content: space-evenly;
+  }
+  .bat{
+    background-image: url("bat.jpg");
+    background-size: cover;
+    width:100px;
+    height:100px;
+    border:2px solid black;
+  }
+  .ball{
+    background-image: url("ball.jpg");
+    background-size: cover;
+    width:100px;
+    height:100px;
+    border:2px solid black;
+  }
+  .stump{
+    background-image: url("stump.jpg");
+    background-size: cover;
+    width:100px;
+    height:100px;
+    border:2px solid black;
+  }
+</style>
+
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <div class="same">
+  <button class="bat"onclick="
+  // button.innerText='USer has clicked on Bat';
+  
+  alert('User has clicked on Bat.');
+    let computer_choice=computerChoice();//global variable
+    let resultMessage=getResult(bat,computer_choice);
+      showResult(bat,computer_choice,resultMessage);
+      "></button>
+
+  <button class="ball" onclick="alert('User has clicked on Ball');
+    computer_choice=computerChoice();//global variable
+    resultMessage=getResult(ball,computer_choice);
+    showResult(ball,computer_choice,resultMessage);
+    ">
+    
+  </button>
+
+  <button class="stump" onclick="alert('User has clicked on Stump')
+    computer_choice=computerChoice();//global variable
+    resultMessage=getResult(stump,computer_choice);
+    showResult(stump,computer_choice,resultMessage);
+    ">
+    Stump
+  </button>
+</div>
+<br><br>
+  <b class="firstMessage"></b><br>
+  <b class="secondMessage"></b><br>
+  <b class="userMove"></b><br>
+  <b class="computerMove"></b><br>
+  <b class="score"></b><br>
+  <b class="result"></b>
+
+
+  <script>
+    document.querySelector('.firstMessage').innerText = `Choice:0 for Bat, 1 for Ball, 2 for Stump`;
+    document.querySelector('.secondMessage').innerText = `Hope you would like the game.`;
+    // alert("Choice:0 for Bat, 1 for Ball, 2 for Stump");
+    // alert("Hope you would like the game.");
+
+    let bat = 0,
+      ball = 1,
+      stump = 2;
+
+    let score = {
+      win: 0,
+      loss: 0,
+      draw: 0,
+      displayScore: function () {
+        return `No of Wins:${score.win},
+
+          No of Losses:${score.loss},
+
+          No of Draws:${score.draw}`
+      }
+
+    };
+    
+
+    // let computer_choice; global variable
+    function computerChoice() {
+      //local variable
+      let computer_choice = Math.floor(Math.random() * 3);
+      return computer_choice;
+    }
+
+    function getResult(userMove, computerMove) {
+      if (userMove == bat) {
+        //Nested IF ELSE
+        if (computerMove == bat) {
+          score.draw++;
+          return "draw";
+        } else if (computerMove == ball) {
+          score.win++;
+          return "User wins";
+        } else if (computerMove == stump) {
+          score.loss++;
+          return "Computer wins";
+        }
+      } else if (userMove == ball) {
+        if (computerMove == ball) {
+          score.draw++;
+
+          return "Draw";
+        } else if (computerMove == bat) {
+          score.loss++;
+
+          return "Computer Wins";
+        } else if (computerMove == stump) {
+          score.win++;
+          return "User Wins";
+        }
+      } else {
+        if (computerMove == stump) {
+          score.draw++;
+
+          return "Draw";
+        } else if (computerMove == bat) {
+          score.win++;
+
+          return "User Wins";
+        } else if (computerMove == ball) {
+          score.loss++;
+
+          return "Computer Wins";
+        }
+      }
+    }
+
+    function showResult(userMove, computerMove, result) {
+      localStorage.setItem('Score', JSON.stringify(score));
+
+      document.querySelector('.userMove').innerText = `User choice is: ${userMove}`;
+
+      document.querySelector('.computerMove').innerText = `Computer choice is: ${computerMove}`;
+
+      document.querySelector('.result').innerText = `Result is: ${result}`;
+
+      document.querySelector('.score').innerText = `Score is:
+
+      ${score.displayScore()}`;
+
+      console.log(score);
+
+      // alert(
+
+      //   `User choice is ${userMove}.Computer choice is ${computerMove} 
+
+      //     Result is ${result}
+
+      //     ${score.displayScore()}
+      //     `
+      // );
+    }
+
+
+  </script>
+</body>
+
+</html>

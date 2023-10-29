@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="cricketgame.css" />
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button
+      onclick="console.log('User has clicked on Bat.');
+
+alert(`User choice is ${user_choice0}.`);
+
+let computer_choice0=Math.floor(Math.random()*3);
+alert(`Computer choice is ${computer_choice0}.`);
+
+if(user_choice0==computer_choice0)
+  {
+    alert('draw');
+  }
+  else if (user_choice0 == 0 && computer_choice0 == 1) {
+      alert('User wins')
+    }
+    else if (computer_choice0 == 2 && user_choice0 == 0) {
+      alert('Computer wins')
+    }
+ 
+    " >Bat</button>
+    
+    <button onclick="console.log('User has clicked on Ball')
+    
+    alert(`User choice is ${user_choice1}`);
+    
+    let computer_choice1=Math.floor(Math.random()*3);
+    alert(`Computer choice is ${computer_choice1}`);
+
+    if(user_choice1==computer_choice1)
+    {
+      alert('Draw')
+    }
+    else if(user_choice1==1 && computer_choice1==0)
+
+    {
+       alert('Computer Wins');
+    }
+    else if(user_choice1==1 && computer_choice1==2)
+
+    {
+       alert('User Wins');
+    }
+  
+    ">Ball</button>
+
+    <button onclick="console.log('User has clicked on Stump')
+    
+    alert(`User choice is ${user_choice2}`);
+    
+    let computer_choice2=Math.floor(Math.random()*3);
+    alert(`Computer choice is ${computer_choice2}`);
+
+    if(user_choice2==computer_choice2)
+    {
+      alert('Draw')
+    }
+    else if(user_choice2==2 && computer_choice2==0)
+
+    {
+       alert('User Wins');
+    }
+    else if(user_choice2==2 && computer_choice2==1)
+
+    {
+       alert('Computer Wins');
+    }"
+    >Stump</button>
+   
+    <script>
+      alert("Choice:0 for Bat, 1 for Ball, 2 for Stump");
+     alert('Hope you would like the game.')
+      const Bat=0,Ball=1,Stump=2;
+    
+      let user_choice0=Bat;
+      let user_choice1=Ball;
+      let user_choice2=Stump;
+   
+
+    </script>
+  </body>
+</html>

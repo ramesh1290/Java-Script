@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+
+    //FUNCTION CAN BE PASSED AS AN ARGUEMENT TO OTHER FUNCTION
+    let sum = function (num1, num2) {
+      return num1 + num2;
+    }
+
+    let addThreeNumber = function (num1, num2, num3, addTwoNumbers) {
+      let sum1 = addTwoNumbers(num1, num2);
+      return addTwoNumbers(sum1, num3);
+    }
+    console.log(addThreeNumber(4, 6, 6, sum));
+    console.log(addThreeNumber);
+    console.log(typeof addThreeNumber)
+
+  </script>
+</body>
+
+</html>

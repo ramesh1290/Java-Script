@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.buttonClass{
+ width:100px;
+ height:50px;
+ font-size: 10px;
+ background-color:rgba(255,0,0,0.4);
+ color:white;
+ border:none;
+ border-radius: 4px;
+}
+.newButtonClass{
+  width:200px;
+  height: 100px;
+  font-size: 25px;
+}
+  </style>
+</head>
+
+<body>
+  <button class="buttonClass"
+  
+  >click me</button>
+  <script>
+    //1 
+    let multiply = function (num1, num2) {
+      return num1 * num2;
+    }
+    console.log(multiply(2, 2));
+    //2
+  let printGreeting=function(){
+    console.log('hello world')
+  }
+  let printTwice=function(inputFunction){
+    inputFunction();
+    inputFunction();
+
+  }
+  printTwice(printGreeting);
+    //3
+
+    function doubleclick()
+    {
+      // let buttonElement=document.querySelector('.buttonClass');
+      buttonElement.classList.add('newButtonClass')
+           
+    }
+    
+    //4
+    //NEXT METHOD
+    // let growElement = () => {
+    //   console.log('grow')
+    // }
+    let behaviour = event => {
+    setTimeout(doubleclick, 2000);
+  
+      //doubleclick is only function name herre setTimeout call the function at 2 seconds delay
+     
+    }
+    let buttonElement = document.querySelector('.buttonClass')
+    buttonElement.addEventListener('click', behaviour)
+    //5
+    let arr = [1, 2, 3, 4, 5,6]
+    let sum=0;
+    arr.forEach((num)=> {
+    
+     sum= sum+num;
+
+
+    });
+    console.log(sum);
+    //NEXT METHOD TO FIND THE SUM
+    // let sum = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //   sum = sum + arr[i];
+    // }
+    // console.log(sum);
+
+    //6
+    let arr2 = [1, 2, 3, 4, 5]
+    let square = arr2.map((num) => {
+      return num * num;
+    })
+    console.log(`The square of the given array is ${square}`)
+  </script>
+</body>
+
+</html>

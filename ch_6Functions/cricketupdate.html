@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Cricket Game</title>
+ 
+</head>
+<style>
+  body{
+    text-align: center;
+  }
+</style>
+
+<body>
+  <h1>Bat Ball Stump Game</h1>
+  <button onclick="alert('User has clicked on Bat.');
+
+alert(`User choice is ${user_choice0}.`);
+
+let computer_choice=computerChoice();
+    alert(`Computer choice is ${computer_choice}`);
+// computerChoice();
+if(user_choice0==computer_choice)
+  {
+    alert('draw');
+  }
+  else if (user_choice0 == 0 && computer_choice == 1) {
+      alert('User wins')
+    }
+    else if (computer_choice == 2 && user_choice0 == 0) {
+      alert('Computer wins')
+    }
+ 
+    ">
+    Bat
+  </button>
+
+  <button onclick="console.log('User has clicked on Ball')
+    
+    alert(`User choice is ${user_choice1}`);
+
+    computer_choice=computerChoice();
+    alert(`Computer choice is ${computer_choice}`);
+    
+    // computerChoice();
+
+    if(user_choice1==computer_choice)
+    {
+      alert('Draw')
+    }
+    else if(user_choice1==1 && computer_choice==0)
+
+    {
+       alert('Computer Wins');
+    }
+    else if(user_choice1==1 && computer_choice==2)
+
+    {
+       alert('User Wins');
+    }
+  
+    ">
+    Ball
+  </button>
+
+  <button onclick="console.log('User has clicked on Stump')
+    
+    alert(`User choice is ${user_choice2}`);
+
+     computer_choice=computerChoice();
+    alert(`Computer choice is ${computer_choice}`);
+    
+    // computerChoice();
+    if(user_choice2==computer_choice)
+    {
+      alert('Draw')
+    }
+    else if(user_choice2==2 && computer_choice==0)
+
+    {
+       alert('User Wins');
+    }
+    else if(user_choice2==2 && computer_choice==1)
+
+    {
+       alert('Computer Wins');
+    }">
+    Stump
+  </button>
+
+  <script>
+    alert("Choice:0 for Bat, 1 for Ball, 2 for Stump");
+    alert("Hope you would like the game.");
+    const Bat = 0,
+      Ball = 1,
+      Stump = 2;
+
+    let user_choice0 = Bat,
+      user_choice1 = Ball,
+      user_choice2 = Stump;
+
+   // let computer_choice; global variable
+    function computerChoice()
+    {
+//local variable
+     let computer_choice = Math.floor(Math.random() * 3);
+      return computer_choice;
+    }
+  </script>
+</body>
+
+</html>
